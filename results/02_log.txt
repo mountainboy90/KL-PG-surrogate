@@ -1,0 +1,119 @@
+  Sampler Rhat_max ESS_min ESS_med Time_chain_s GD_iters GD_step GD_time_s
+1   KL-PG    1.004   634.7   23222        113.9    50374   1.946     17.28
+  GD_train_KL Max_abs_postmean_minus_GD
+1     0.04999                     1.967
+    Model   Set Recall Specificity Accuracy    CE LogLoss   AUC
+1 XGBoost Train  0.834       0.828    0.829 0.171   0.297 0.908
+2 XGBoost  Test  0.769       0.801    0.796 0.204   0.328 0.857
+3      LR Train  0.696       0.795    0.776 0.224   0.382 0.815
+4      LR  Test  0.679       0.812    0.789 0.211   0.356 0.827
+    Set Surrogate Fid_Acc Fid_Recall Fid_Spec Fid_LogLoss     KL  Dloss Acc_y
+1 Train        LR   0.882      0.804    0.916       0.303 0.2109 0.2333 0.775
+2  Test        LR   0.882      0.774    0.928       0.324 0.2238 0.1653 0.781
+3 Train     Ridge   0.860      0.766    0.900       0.346 0.1227 0.1616 0.769
+4  Test     Ridge   0.862      0.735    0.915       0.362 0.1346 0.1100 0.787
+5 Train     KL-PG   0.860      0.766    0.900       0.414 0.0500 0.0885 0.772
+6  Test     KL-PG   0.860      0.726    0.917       0.429 0.0506 0.0316 0.788
+  Recall_y Spec_y AUC_y LogLoss_y
+1    0.694  0.794 0.813     0.530
+2    0.679  0.803 0.825     0.494
+3    0.677  0.790 0.804     0.459
+4    0.687  0.808 0.814     0.438
+5    0.687  0.793 0.812     0.386
+6    0.679  0.811 0.824     0.360
+  Surrogate MAE_slope Pearson_slope Sign_agree Spearman_imp Local_R2
+1        LR     1.309         0.596         13        0.682  -61.320
+2     KL-PG     0.296         0.785         13        0.736   -1.396
+3     Ridge     0.359         0.786         12        0.689   -0.709
+  Slope_coverage Unused_flagged Mean_int_width
+1          0.125              1          0.795
+2          0.562              0          0.678
+3             NA             NA             NA
+  Surrogate        Metric   Mean     Lo     Hi
+1     KL-PG     MAE_slope  0.331  0.249  0.437
+2     KL-PG Pearson_slope  0.739  0.629  0.822
+3     KL-PG    Sign_agree 11.994 10.000 13.000
+4     KL-PG  Spearman_imp  0.674  0.482  0.837
+5     KL-PG      Local_R2 -2.009 -5.248 -0.550
+                     Feature       LR     LR_lo   LR_hi    Ridge   KL_GD
+                      QV2M.W   1.8314    1.5705   2.092  0.69276  0.6593
+                   T2M_MAX.W   8.6435    7.2867  10.000  0.76994  1.6832
+                           K   1.3638    1.1885   1.539  0.75449  0.4382
+                       WD10M  -0.4126   -0.5762  -0.249 -0.00655 -0.3029
+                           N   0.2105    0.0731   0.348  0.23387  0.1554
+                Soilcolorred   1.5982    1.3035   1.893  1.32340  0.8614
+                  T2M_MAX.Su  -2.5574   -3.2052  -1.910  0.48799 -0.0580
+                          Ph  -0.4276   -0.5912  -0.264 -0.31845 -0.1629
+                           S  -0.2717   -0.4096  -0.134 -0.14098 -0.1766
+                           P  -0.3364   -0.5036  -0.169 -0.20672 -0.0789
+                   CLOUD_AMT   1.5407    1.2408   1.840  0.64946  0.7485
+                          Zn   0.0249   -0.1070   0.157  0.03583  0.0149
+              Soilcolorblack  -0.9530   -1.3455  -0.560 -0.58728 -0.3091
+      Soilcolorreddish_brown   1.1909    0.5914   1.791  0.70880  0.7740
+         Soilcolordark_brown   1.5179    0.7763   2.260  1.03590  0.9831
+              Soilcolorother   1.6746    0.9831   2.366  0.98704  0.6042
+          Soilcolordark_gray  -1.6824   -3.7711   0.406 -1.19799 -1.1388
+ Soilcolordark_reddish_brown   0.5332   -3.0401   4.106  0.03142  0.3886
+               Soilcolorgray  -0.2976   -1.4360   0.841 -0.41606  0.1933
+    Soilcolorvery_dark_brown   3.3932    1.1856   5.601  1.65451  1.1746
+    Soilcoloryellowish_brown -15.8675 -643.7710 612.036 -1.77956 -0.8184
+  PG_mean    PG_lo   PG_hi SHAP_slope Mean_abs_SHAP      LR_y   LR_y_lo
+  0.67076   0.4950  0.8563    0.49341        0.5214   0.73164  5.42e-01
+  1.79499   0.9095  2.8935    0.34455        0.4405   3.44286  2.30e+00
+  0.44795   0.3210  0.5766    0.35803        0.3037   0.49770  3.69e-01
+ -0.30692  -0.4412 -0.1769    0.00165        0.2301  -0.31006 -4.44e-01
+  0.15569   0.0353  0.2757    0.14576        0.2257   0.09893 -2.45e-02
+  0.86368   0.5977  1.1296    0.46113        0.2141   0.89845  6.28e-01
+ -0.10767  -0.6736  0.3736   -0.21366        0.1943  -0.90604 -1.49e+00
+ -0.16497  -0.3108 -0.0216    0.13452        0.1837  -0.17785 -3.25e-01
+ -0.18060  -0.3071 -0.0557    0.00168        0.1641  -0.20435 -3.32e-01
+ -0.09111  -0.2572  0.0543   -0.00906        0.1313  -0.08830 -2.35e-01
+  0.75219   0.4943  1.0180    0.20133        0.1105   0.75376  4.76e-01
+  0.00901  -0.1144  0.1220    0.07305        0.0906   0.00507 -1.13e-01
+ -0.31527  -0.6645  0.0265   -0.27834        0.0856  -0.36391 -7.17e-01
+  0.76959   0.2056  1.3197    0.49318        0.0313   1.02602  4.74e-01
+  0.96908   0.2485  1.6605    0.47803        0.0201   1.24176  5.58e-01
+  0.58421  -0.1078  1.2342    0.29006        0.0152   0.86412  2.28e-01
+ -1.54910  -4.1954  0.2339    0.00000        0.0000 -14.51538 -8.49e+02
+ -0.24298  -4.0524  2.2009    0.00000        0.0000 -13.89301 -1.59e+03
+  0.12538  -0.8342  0.9635    0.00000        0.0000   0.12235 -7.71e-01
+  0.98398  -1.2584  2.7909    0.00000        0.0000   2.26073  6.39e-01
+ -2.78554 -11.3920  1.6254    0.00000        0.0000 -15.26571 -1.86e+03
+   LR_y_hi Closest_to_SHAP Closest_to_LR_y KLPG_covers_LR_y
+    0.9209           KL-PG           Ridge             TRUE
+    4.5822           Ridge           KL-PG            FALSE
+    0.6263           KL-PG           KL-PG             TRUE
+   -0.1763           Ridge           KL-PG             TRUE
+    0.2224           KL-PG           KL-PG             TRUE
+    1.1689           KL-PG           KL-PG             TRUE
+   -0.3227           KL-PG           KL-PG            FALSE
+   -0.0311           KL-PG           KL-PG             TRUE
+   -0.0765           Ridge           KL-PG             TRUE
+    0.0588           KL-PG           KL-PG             TRUE
+    1.0314           Ridge           KL-PG             TRUE
+    0.1234           Ridge           KL-PG             TRUE
+   -0.0107           KL-PG           KL-PG             TRUE
+    1.5782           Ridge              LR             TRUE
+    1.9259           KL-PG           Ridge             TRUE
+    1.5000           KL-PG           Ridge             TRUE
+  819.5352           KL-PG              LR            FALSE
+ 1564.4817           Ridge           Ridge            FALSE
+    1.0159           KL-PG           KL-PG             TRUE
+    3.8829           KL-PG           Ridge             TRUE
+ 1826.2577           KL-PG              LR            FALSE
+ Surrogate Closest_to_SHAP MAE_to_SHAP Closest_to_LR_y MAE_to_LR_y
+        LR               0       1.309               1       0.809
+     Ridge               6       0.359               3       0.410
+     KL-PG              10       0.296              12       0.233
+ Sign_agree_LR_y Cor_LR_y Interval_covers_LR_y
+              16    0.976                    6
+              15    0.599                   NA
+              16    0.937                   14
+Iterations to excess KL < 1e-4, 1e-6, 1e-8: 1320 9000 21980 
+   Model Mean_pred_minus_obs ECE_deciles Top_decile_pred Top_decile_obs
+      LR             0.11906      0.1264           0.951          0.545
+   Ridge             0.12075      0.1207           0.868          0.481
+   KL-PG             0.01694      0.0383           0.573          0.519
+ LR on y             0.01622      0.0282           0.591          0.532
+ XGBoost             0.00283      0.0208           0.642          0.649
+Done.

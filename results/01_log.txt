@@ -1,0 +1,7 @@
+Ridge benchmark lambda = 0.02048
+KL-GD: 50374 iterations, step 1.946, max|grad| 1.00e-08, train mean KL 0.0500, 17.3 s
+max |KL-GD - quasi-binomial GLM| = 0.000113 
+KL-PG chain 1: 105.1 s
+KL-PG chain 2: 111.3 s
+KL-PG chain 3: 121.5 s
+KL-PG chain 4: 117.6 s
